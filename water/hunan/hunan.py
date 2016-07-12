@@ -15,7 +15,7 @@ f1.write(title)
 f1.write('\n')
 f2.write(title)
 f2.write('\n')
-begin = datetime.date(2016,7,11)
+begin = datetime.date(2016,7,12)
 end = datetime.date(2016,6,1)
 d = begin
 delta = datetime.timedelta(days=1)
