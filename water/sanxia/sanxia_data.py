@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 import datetime
 
-begin = datetime.date(2016,7,15)
+begin = datetime.date(2016,6,1)
 end = datetime.date.today()
 d = begin
 filename = end.strftime("%Y-%m-%d")
@@ -34,25 +34,37 @@ while d <= end:
         for i in range(1, len(Atable)):
             table=Atable[i]
             Atd=table.find_all('td')
-            print len(Atd)
+            #print len(Atd)
             if len(Atd)>0:
                 td=Atd[0].text.encode('utf-8')
                 f1.write(td)
+                f1.write('\t')
             if len(Atd)>7:
                 td=Atd[7].text.encode('utf-8')
                 f1.write(td)
+                f1.write('\t')
+            else:
+                f1.write('\t\t')
             if len(Atd)>5:
                 td=Atd[5].text.encode('utf-8')
                 f1.write(td)
+                f1.write('\t')
+            else:
+                f1.write('\t\t')
             if len(Atd)>3:
                 td=Atd[3].text.encode('utf-8')
                 f1.write(td)
+                f1.write('\t')
+            else:
+                f1.write('\t\t')
             if len(Atd)>1:
                 td=Atd[1].text.encode('utf-8')
                 f1.write(td)
+                f1.write('\t')
+            else:
+                f1.write('\t\t')
             #pdb.set_trace()
-            #for i in [0,7,5,3,1]:
-            f1.write('  ')
+            f1.write('\t')
         f1.write('\n')
     except:
         print (datename + "Error")    
