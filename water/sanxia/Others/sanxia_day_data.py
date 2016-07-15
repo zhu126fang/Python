@@ -41,21 +41,6 @@ for i in range(1, len(Atable)):
         f1.write(td)
     f1.write('  ')
 f1.write('\n')
-    
-##    f1.write('{\n"title":"' + Atd[0].text.encode('gb18030') + '",\n')
-##    f1.write('"Value":[\n')
-##    f1.write('"2":"' + Atd[7].text.encode('gb18030') + '",\n')
-##    f1.write('"8":"' + Atd[5].text.encode('gb18030') + '",\n')
-##    f1.write('"14":"' + Atd[3].text.encode('gb18030') + '",\n')
-##    f1.write('"20":"' + Atd[1].text.encode('gb18030') + '"\n')
-##    f1.write(']\n')
-##    f1.write('}\n')
-#pdb.set_trace()   
 
-#pdb.set_trace() 
-
-#print rp.headers['content-type']
-#print (rp.text)
-#f1.write(rp.content)
 f1.close
 print ('Fin')
