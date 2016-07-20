@@ -9,8 +9,9 @@ from bs4 import BeautifulSoup
 import datetime
 
 begin = datetime.date(2016,7,1)
-end = datetime.date(2016,7,9)
+end = datetime.date.today()
 d = begin
+filename = end.strftime("%Y-%m-%d")
 delta = datetime.timedelta(days=1)
 while d <= end:
     datename=d.strftime("%Y-%m-%d")
@@ -18,7 +19,7 @@ while d <= end:
     d += delta
    
 datename=''
-f1=open('./main' + datename + '.html','w')
+f1=open('./changjiang' + filename + '.html','w')
 
 #Get the list
 post_url="http://www.cjmsa.gov.cn/vcms/classArticleListByPage.do" #Get the Data
