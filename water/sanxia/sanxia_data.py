@@ -7,18 +7,18 @@ from bs4 import BeautifulSoup
 
 import datetime
 
-begin = datetime.date(2016,6,1)
+begin = datetime.date(2016,7,1)
 end = datetime.date.today()
-d = begin
+d = end
 filename = end.strftime("%Y-%m-%d")
 #pdb.set_trace()
 f1=open('./sanxia/main' + filename + '.html','w')
 
 delta = datetime.timedelta(days=1)
-while d <= end:
+while d >= begin:
     datename=d.strftime("%Y-%m-%d")
     print datename
-    d += delta
+    d -= delta
     post_url="http://www.ctg.com.cn/inc/sqsk.php" #Get the Data
     data={
             'NeedCompleteTime2':datename,
