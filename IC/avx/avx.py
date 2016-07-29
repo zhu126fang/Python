@@ -1,5 +1,4 @@
-#coding=gb18030
-#UTF-8 BOM
+#coding=utf-8
 import pdb
 import requests
 import sys
@@ -11,7 +10,7 @@ import datetime
 
 end = datetime.date.today()
 filename = end.strftime("%Y-%m-%d")
-f1=open('./Home' + filename + '.html','w')
+f1=open('./avx' + filename + '.html','w')
 print filename
 #pdb.set_trace()
 
@@ -20,39 +19,30 @@ print post_url
 try:
     rp=requests.post(post_url)
     ##It is very important!
-    rp.encoding='gb18030'
-    soup = BeautifulSoup(rp.content, "html.parser",from_encoding = 'gb18030')
+    rp.encoding='utf-8'
+    soup = BeautifulSoup(rp.content, "html.parser",from_encoding = 'utf-8')
     
-    Adiv = soup.find_all("div",class_="dataTables_wrapper no-footer")
-    div = Adiv[3]
-    pdb.set_trace()
-    #print table
-    
-    Atr = table.find_all('tr')
+    Asia = soup.find("table",class_="tablepress tablepress-id-12")
+    Atr = Asia.find_all('tr')
+    print len(Atr)
     #pdb.set_trace()
 
-    for i in range(2,len(Atr)):
+    for i in range(1,len(Atr)):
         tr=Atr[i]
         Atd = tr.find_all('td')
-        post_url = 'http://119.97.201.28:8087/'+ Atd[0].a.get('href')
-        rp=requests.post(post_url)
-        ##It is very important!
-        rp.encoding='gb18030'
-        soup = BeautifulSoup(rp.content, "html.parser",from_encoding = 'gb18030')
-        print post_url
-        pdb.set_trace()
-        
-        for i in range(0,len(Atd)):
-            td = Atd[i]
-            tdtext = td.text.encode('utf-8').strip()
-            #print len(tdtext)
-            f1.write(tdtext)
-            if len(tdtext)<34:
-                f1.write('\t')
-            if len(tdtext)<33:
-                f1.write('\t')
-            #pdb.set_trace()
-            f1.write('\t')            
+        print len(Atd)
+        if len(Atd)>0:
+            f1.write(Atd[0].text.ljust(50))
+        if len(Atd)>1:
+            f1.write(Atd[1].text.ljust(30))
+        if len(Atd)>2:
+            if (Atd[2].a is None):
+                print 'None'
+            else:
+                print Atd[2].a['href']
+                f1.write(Atd[2].a['href'].ljust(30))
+        #pdb.set_trace()
+        print(i)
         f1.write('\n')
 except:
     print (filename + "Error")    
