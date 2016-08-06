@@ -25,20 +25,34 @@ f1=open('./huanqiu_world' + today + '.txt','w')
 
 post_url='http://world.huanqiu.com/article/' #Get the Data
 print post_url
+#f1.write(post_url + '\n')
 try:
     rp = post(post_url)
     soup = BeautifulSoup(rp,"html.parser")
+
     Ali = soup.find_all("li",class_="item")
     print len(Ali)
-    #pdb.set_trace()
     for i in range(0,len(Ali)):
 	li = Ali[i]
-	print li.a['href']
-	print li.a['title']
+	f1.write(li.h6.text.ljust(20))
 	f1.write(li.a['href'].ljust(65))
 	f1.write(li.a['title'].encode('utf-8'))
 	f1.write('\n')
-    #pdb.set_trace()
+    for i in range(2,31):
+	new_post_url = post_url + str(i) + '.html'
+	print new_post_url
+    	rp = post(new_post_url)
+    	soup = BeautifulSoup(rp,"html.parser")
+
+    	Ali = soup.find_all("li",class_="item")
+    	print len(Ali)
+	for i in range(0,len(Ali)):
+	    li = Ali[i]
+	    f1.write(li.h6.text.ljust(20))
+	    f1.write(li.a['href'].ljust(65))
+	    f1.write(li.a['title'].encode('utf-8'))
+	    f1.write('\n') 
+    	#pdb.set_trace()
 except:
     print (today + "Error")    
 f1.close
