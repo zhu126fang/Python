@@ -24,5 +24,7 @@
         
 ###[百度云论坛](http://www.bdybbs.com/)  
  
-###[电影天堂](http://www.bttiantang.com/)
+###[电影天堂](http://www.bttiantang.com/)  
   
+###[迅播影院](http://www.xiamp4.com)  
+- [幸存者:瓜隆岛 第三十二季](http://www.xiamp4.com/Html/GP22686.html)
