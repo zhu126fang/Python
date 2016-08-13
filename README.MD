@@ -1,5 +1,6 @@
-##克隆方法
-- git config --global user.name [username]
+##长期存储密码
+- git config --global credential.helper store  
+
 ##手动安装
 [Windows平台安装Beautiful Soup](http://kevinkelly.blog.163.com/blog/static/21390809320133185748442/)  
 ##安装工具安装
