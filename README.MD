@@ -1,3 +1,7 @@
+##保护windows的bat脚本
+script--开关机时间记录
+
+##其它
 ###长期存储密码  
 - git config --global credential.helper store  
 
