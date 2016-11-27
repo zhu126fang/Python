@@ -1,14 +1,12 @@
 ##1 最近更新
-http://iidvd.com/  
-http://www.finsaa.com/  
-http://www.4567dy.net/  
-http://www.beiwo.tv/  
-http://www.97soo.com/  
-http://www.xh127.com/  
-https://www.wanzi.tv/  
-http://www.mp4wan.com/  
+[http://www.finsaa.com/](http://www.finsaa.com/)  
+- [西部世界S01](http://www.finsaa.com/neirong/96925.html)  
+[http://www.beiwo.tv/](http://www.beiwo.tv/)  
+- [西部世界S01](http://www.beiwo.tv/vod/31022/)  
+[http://www.xh127.com/](http://www.xh127.com/)  
+- [西部世界S01](http://www.xh127.com/read-2419)  
 http://bbs.3dmgame.com/forum.php?mod=forumdisplay&fid=775&filter=typeid&typeid=7554  
-http://www.mp4ba.la/  
+- [西部世界S01](http://bbs.3dmgame.com/forum.php?mod=viewthread&tid=5336035&extra=page%3D1%26filter%3Dtypeid%26typeid%3D7554)  
 
 ###[http://huhupan.com/](http://huhupan.com/) 
 - [huhupan青云志--迅雷会延后更新44-41](http://huhupan.com/dsj/gcj/2016-07-29/5270.html)  
@@ -34,6 +32,13 @@ http://www.mp4ba.la/
 - [西部世界S01](http://www.ttmeiju.com/meiju/Westworld.html)  
 
 ##3 其他资源
+- [http://iidvd.com/需要播放器](http://iidvd.com/)  
+- [http://www.97soo.com/需要播发器]http://www.97soo.com/  
+- [http://www.4567dy.net/延时1集](http://www.4567dy.net/)  
+- [https://www.wanzi.tv/仅电影](https://www.wanzi.tv/)  
+- [http://www.mp4wan.com/仅电影](http://www.mp4wan.com/)  
+- [http://www.mp4ba.la/仅电影](http://www.mp4ba.la/)  
+
 ###[http://www.bdybbs.com/--百度云盘](http://www.bdybbs.com/)  
 
 ###[http://www.rarbt.com/](http://www.rarbt.com/)
