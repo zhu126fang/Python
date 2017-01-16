@@ -21,7 +21,7 @@ soup = BeautifulSoup(rp, "html.parser",from_encoding = 'utf-8')
 all_block = soup.find_all(class_="block")                                       #get the block
 print len(all_block)
 
-for i in range(1,len(all_block)):
+for i in range(1,2):
         block = all_block[i]
         try:
                 category = block.h2.a.text              #if encode('utf-8') print will messy code
@@ -42,17 +42,19 @@ for i in range(1,len(all_block)):
                 viewimg_title  = block.find(class_="viewimg").a["title"]
                 viewimg_href = block.find(class_="viewimg").a["href"]
 
+                #Use the html name to create the id
                 url_name = viewimg_href.split("/")[-1].split(".")[0]
                 new_url = "http://www.huhupan.com/e/extend/down/?id=" + url_name
+                new_url = "http://www.huhupan.com/e/extend/down/?id=262"
                 print new_url
                 rp = rppost.post(new_url)
                 soup = BeautifulSoup(rp, "html.parser",from_encoding = 'utf-8')
+
+                #Get the soup
                 all_btn = soup.find_all(class_="meihua_btn")
                 for i in range(1,len(all_btn)):
                         print all_btn[i]["href"]
-                all_bdypas = soup.find("input",{"id":re.compile("bdypas\d+")})
-                for i in range(1,len(all_btn)):
-                        print all_bdypas[i]
+                #all_bdypas = soup.find("input",{"id":re.compile("bdypas\d+")})
                 #all_class = soup.find_all(class_="meihua_btn")
                 #print len(all_class)
 
