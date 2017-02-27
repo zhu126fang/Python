@@ -1,0 +1,110 @@
+Sub S0()
+    
+       
+    '标题着色/取消
+    For Line = 2 To 1500
+    
+        If Sheets("Sheet1").Cells(Line, 2) = "序号" Then
+            With Sheets("Sheet1")
+                .Range(.Cells(Line, 1), .Cells(Line, 14)).Interior.ColorIndex = 6
+            End With
+        End If
+    Next
+    
+End Sub
+
+Sub S1()
+    
+       
+    '空行着色
+    For Line = 1 To 1500
+    
+        Clo = 6
+        For i = 1 To 14
+            If Sheets("Sheet1").Cells(Line, i) <> "" Then
+                Clo = 0
+            End If
+        Next
+        With Sheets("Sheet1")
+            .Range(.Cells(Line, 1), .Cells(Line, 14)).Interior.ColorIndex = Clo
+        End With
+    Next
+    
+End Sub
+
+
+Sub S2()
+
+    '删除着色行
+    Application.ScreenUpdating = False
+    For Line = 3 To 1500
+        If Sheets("Sheet1").Cells(Line, 1).Interior.ColorIndex = 6 Then
+            Sheets("Sheet1").Rows(Line).Delete
+        End If
+    Next
+    Application.ScreenUpdating = True
+
+End Sub
+
+
+Sub S3()
+
+    'C列上移/D列上移/E列上移
+    'Line = 22
+    For Line = 1 To 1500
+        
+        If Sheets("Sheet1").Cells(Line, 2) = "" And Sheets("Sheet1").Cells(Line, 5) <> "" Then
+        
+            Sheets("Sheet1").Cells(Line - 1, 5).Value = Sheets("Sheet1").Cells(Line - 1, 5).Value & Sheets("Sheet1").Cells(Line, 5)
+            Sheets("Sheet1").Cells(Line, 5) = ""
+        
+        End If
+    Next
+
+End Sub
+
+
+Sub S4()
+
+    'B列合并
+    For Line = 200 To 213
+        If Left(Sheets("Sheet1").Cells(Line, 2).Value, 3) <> "A20" And Sheets("Sheet1").Cells(Line, 2) <> "" Then
+            'MsgBox (Sheets("Sheet1").Cells(Line, 2))
+            Sheets("Sheet1").Cells(Line - 1, 2) = Sheets("Sheet1").Cells(Line - 1, 2) & Sheets("Sheet1").Cells(Line, 2)
+            Sheets("Sheet1").Cells(Line, 2) = ""
+        End If
+    Next
+
+End Sub
+
+Sub S5()
+
+
+    For Line = 6 To 1500
+        N = Sheets("Sheet1").Cells(Line, 5)
+        F1 = Sheets("Sheet1").Cells(Line, 6)
+        F2 = Sheets("Sheet1").Cells(Line, 7)
+        F3 = Sheets("Sheet1").Cells(Line, 8)
+        R1 = Sheets("Sheet1").Cells(Line, 9)
+        R2 = Sheets("Sheet1").Cells(Line, 10)
+        R3 = Sheets("Sheet1").Cells(Line, 11)
+        R4 = Sheets("Sheet1").Cells(Line, 12)
+        R13 = Sheets("Sheet1").Cells(Line, 13)
+        R14 = Sheets("Sheet1").Cells(Line, 14)
+        R15 = Sheets("Sheet1").Cells(Line, 15)
+    
+        'MsgBox (N & F1 & F2 & F3 & R1 & R2 & R3 & R4)
+        Sheets("Sheet1").Cells(Line, 13) = N & F1 & F2 & F3 & R1 & R2 & R3 & R4 & R13 & R14 & R15
+        Sheets("Sheet1").Cells(Line, 5) = ""
+        Sheets("Sheet1").Cells(Line, 6) = ""
+        Sheets("Sheet1").Cells(Line, 7) = ""
+        Sheets("Sheet1").Cells(Line, 8) = ""
+        Sheets("Sheet1").Cells(Line, 9) = ""
+        Sheets("Sheet1").Cells(Line, 10) = ""
+        Sheets("Sheet1").Cells(Line, 11) = ""
+        Sheets("Sheet1").Cells(Line, 12) = ""
+        Sheets("Sheet1").Cells(Line, 14) = ""
+        Sheets("Sheet1").Cells(Line, 15) = ""
+    Next
+    
+End Sub
